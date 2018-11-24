@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .App-logo {
@@ -19,7 +21,8 @@
 }
 
 .App-link {
-  color: #61dafb;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
@@ -30,3 +33,86 @@
     transform: rotate(360deg);
   }
 }
+
+.ProductTitle {
+    font-size: 23px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.Target-red {
+  /* color: #e80018; */
+  color: #cc0000;
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+.breadcrumb.breadcrumb-item{
+  color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    outline: 0px;
+}
+
+h1 {
+    font-size: 29px;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* font-weight: bold; */
+}
+
+body {
+    line-height: 1.42857;
+    color: rgb(51, 51, 51);
+    background-color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+html {
+    font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+/* .h-margin-b-tiny {
+    margin-bottom: 5px !important;
+}
+
+.h-margin-b-none {
+    margin-bottom: 0px !important;
+}
+
+.h-margin-t-default {
+    margin-top: 15px !important;
+}
+
+.h-text-normal {
+    font-weight: normal !important;
+}
+
+.h-text-hd2 {
+    font-size: 23px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+div, span, p, [tabindex="-1"] {
+    outline: 0px;
+} */

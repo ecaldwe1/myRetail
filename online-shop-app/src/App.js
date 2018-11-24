@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
+// import IOIcons from 'react-icons/io';
 // import logo from './logo.svg';
 import './App.css';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+
+      <div aria-label="breadcrumb">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item"><a href="#">Home</a></li>
+          <li className="breadcrumb-item active"><a href="#">Appliances</a></li>
+        </ol>
+      </div>
+
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -20,8 +30,7 @@ class App extends Component {
             Learn React
           </a>
         </header> */}
-        <Product
-          date={product.date}
+        <LeftColumn
           product_obj={product.product_obj}
         />
       </div>
@@ -31,30 +40,50 @@ class App extends Component {
 
 export default App;
 
-function formatDate(date) {
-  return date.toLocaleDateString();
+// function formatDate(date) {
+//   return date.toLocaleDateString();
+// }
+function LeftColumn (props){
+  return (
+    <div className="col-6">
+      <ProductTitleImage product_obj={props.product_obj}/>
+      <ProductReviews product_obj={props.product_obj}/>
+    </div>
+
+  );
 }
 
-function Product(props) {
+function ProductTitleImage(props) {
   return (
-    <div className="product">
-      <div className="ProductInfo">
-        <div className="UserInfo-name">
-          {props.product_obj.name}
-        </div>        
-        <img
-          className="Image"
-          src={props.product_obj.primary_image}
-          alt={props.product_obj.name}
-        />
-      </div>
-      <div className="Product-price">{props.product_obj.price}</div>
-      <div className="Product-description">
-        {formatDate(props.product_obj.date)}
-      </div>
+    <div>
+      <h1 className="ProductTitle">{props.product_obj.name}</h1>        
+      <img className="Image" src={props.product_obj.primary_image} alt={props.product_obj.name}/>
     </div>
   );
 }
+
+function ProductReviews(props){
+  return (
+    <div>
+        <div>stars row {props.product_obj.overall_rating} <span><strong>overall</strong></span>
+        <div className="ReviewLink">
+        <a className="App-link" href="#">View all X reviews</a>
+        </div>
+        </div>
+    </div>
+  )
+}
+
+// function Product(props) {
+//   return (
+//     <div className="Product">
+//       <ProductTitleImage product_obj={props.product_obj}/>
+//       <div className="Product-price">{props.product_obj.price}</div>
+//       <div className="Product-description">{props.product_obj.description}</div>
+//       <ProductReviews product_obj={props.product_obj}/>
+//     </div>
+//   );
+// }
 
 const product = {
   product_obj: {
