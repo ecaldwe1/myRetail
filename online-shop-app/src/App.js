@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import IOIcons from 'react-icons/io';
 // import logo from './logo.svg';
+// import Carousel from './Carousel'; 
 import './App.css';
 
 
@@ -10,10 +11,10 @@ class App extends Component {
       <div className="App">
 
       <div aria-label="breadcrumb">
-        <ol className="breadcrumb">
+        <ul className="breadcrumb">
           <li className="breadcrumb-item"><a href="#">Home</a></li>
           <li className="breadcrumb-item active"><a href="#">Appliances</a></li>
-        </ol>
+        </ul>
       </div>
 
         {/* <header className="App-header">
@@ -46,28 +47,29 @@ export default App;
 function LeftColumn (props){
   return (
     <div className="col-6">
-      <ProductTitleImage product_obj={props.product_obj}/>
+      <h1 className="ProductTitle">{props.product_obj.name}</h1>     
+      <ProductImage product_obj={props.product_obj}/>
       <ProductReviews product_obj={props.product_obj}/>
     </div>
 
   );
 }
 
-function ProductTitleImage(props) {
+function ProductImage(props) {
   return (
     <div>
-      <h1 className="ProductTitle">{props.product_obj.name}</h1>        
-      <img className="Image" src={props.product_obj.primary_image} alt={props.product_obj.name}/>
+      <img src={props.product_obj.primary_image}/>
     </div>
   );
 }
+
 
 function ProductReviews(props){
   return (
     <div>
         <div>stars row {props.product_obj.overall_rating} <span><strong>overall</strong></span>
         <div className="ReviewLink">
-        <a className="App-link" href="#">View all X reviews</a>
+          <a className="App-link" href="#">View all X reviews</a>
         </div>
         </div>
     </div>
@@ -108,4 +110,3 @@ const product = {
   // />,
 //   document.getElementById('root')
 // );
-
