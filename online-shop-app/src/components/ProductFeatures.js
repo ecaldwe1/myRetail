@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Fragment} from 'react';
 
 function ProductFeatures(props) {
     if (!props.features || props.features === undefined) {
@@ -8,8 +8,10 @@ function ProductFeatures(props) {
           return null;
         } else {
           const feature_list = props.features[0].features;
-          const listItems = feature_list.map((feature) =>
-            <li key={feature.toString()} dangerouslySetInnerHTML={{ __html: feature }}></li>
+          const listItems = feature_list.map((feature) => 
+            <li key={feature.toString()}>
+                {feature}
+            </li>
           );
           return (
               <div className="promos_row row">

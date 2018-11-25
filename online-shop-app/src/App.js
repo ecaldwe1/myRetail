@@ -1,12 +1,16 @@
 /* eslint-disable no-unused-expressions */
 import React, {Component} from 'react';
 import PurchaseChannel from './components/PurchasingChannel';
+import {IoMdPricetag} from 'react-icons/io';
 // import IOIcons from 'react-icons/io'; 
 // import logo from './logo.svg'; import
 import ProductFeatures from './components/ProductFeatures';
 import ProductPrice from './components/ProductPrice';
 import './App.css';
-
+import StarRating from './components/StarRating';
+import Gallery from './components/ImageCarousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import ReactSlickDemo from './components/ImageCarousel'
 
 class App extends Component {
     constructor(props) {
@@ -31,8 +35,6 @@ class App extends Component {
             .then(response => response.json())
             .then(data => {
                 this.setState({data: data.CatalogEntryView[0]});
-                console.log(this.state.data);
-                console.log(this.state.data.Images);
             })
             .catch(err => console.error(this.props.url, err.toString()))
         }
@@ -45,7 +47,6 @@ class App extends Component {
 
 export default App;
 
-
 function LeftColumn(props) {
     if (!props || props === undefined) {
         return null;
@@ -55,6 +56,10 @@ function LeftColumn(props) {
             <div className="col-6 mx-auto">
                 <h1 className="ProductTitle">{props.product_obj.title}</h1>
                 <ProductImage main_image={props.product_obj.Images} product_title={props.product_obj.title}/>
+                <div className="row">
+                <ReactSlickDemo images={props.product_obj.Images}/>
+                    {/* <Gallery images={props.product_obj.Images}/> */}
+                </div>
                 <ProductReviews product_reviews={props.product_obj.CustomerReview}/>
             </div>
 
@@ -84,15 +89,14 @@ function ProductReviewOverall(props) {
         return (
             <div className="row OverallStarsRow">
                 <div className="col-6">
-                    <div>stars row {
-                            props.product_overall_rating
-                        }
+                    <div className="row FiveStars">
+                      <StarRating rating={props.product_overall_rating}/>
                         <span>
                             <strong> overall</strong>
                         </span>
                     </div>
                 </div>
-                <div className="col-6 pull-right">
+                <div className="col-6">
                     <div className="ReviewLink">
                         <a className="App-link" href="#">
                             View all {props.product_review_count} reviews
@@ -112,7 +116,8 @@ function ProductProReview(props) {
             <div className="col-sm-5">
                 <div>
                     <div>
-                        row of stars - {props.pro[0].overallRating}</div>
+                      <StarRating rating={props.pro[0].overallRating}/>
+                      </div>
                     <p className="card-text review-title">{props.pro[0].title}</p>
                 </div>
                 <div className="small-text">
@@ -133,7 +138,7 @@ function ProductConReview(props) {
             <div className="col-sm-5">
                 <div>
                     <div>
-                        row of stars - {props.con[0].overallRating}</div>
+                        <StarRating rating={props.con[0].overallRating}/></div>
                     <p className="card-text review-title">{props.con[0].title}</p>
                 </div>
                 <div className="small-text">
@@ -199,8 +204,8 @@ function RightColumn(props) {
         <div className="col-6 right-col">
             <ProductPrice price={props.product_obj.Offers}/>
             <hr/>
-            <div>
-              PROMOS!
+            <div className="row">
+              <IoMdPricetag /> PROMOS!
             </div>
             {/* <ProductPromotions promos={props.product_obj.Promotions}/> */}
             <hr/>
@@ -246,3 +251,5 @@ function ReturnPolicy(props){
     </div>
   );
 }
+
+

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 function ProductPrice(props) {
     if (!props.price || props.price === undefined) {

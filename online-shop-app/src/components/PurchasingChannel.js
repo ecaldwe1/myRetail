@@ -1,7 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 function PickUpButton(props) {
-    return <button type="button" className="btn btn-dark btn-large major-btn">PICK UP IN STORE</button>;
+    return (
+        <div className="PickupBtn">
+            <button type="button" className="btn btn-dark btn-large major-btn">
+                PICK UP IN STORE
+            </button>
+            <a href="#" className="small-text">find in a store</a>
+        </div>
+    );
 }
 
 function AddCartButton(props) {
@@ -27,7 +34,6 @@ function PurchaseChannel(props) {
     } else {
         return null;
     }
-
 }
 
 export default PurchaseChannel;
