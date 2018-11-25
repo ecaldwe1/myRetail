@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-expressions */
 import React, {Component} from 'react';
+import PurchaseChannel from './components/PurchasingChannel';
 // import IOIcons from 'react-icons/io'; 
 // import logo from './logo.svg'; import
+import ProductFeatures from './components/ProductFeatures';
+import ProductPrice from './components/ProductPrice';
 import './App.css';
 
 
@@ -112,10 +115,10 @@ function ProductProReview(props) {
                         row of stars - {props.pro[0].overallRating}</div>
                     <p className="card-text review-title">{props.pro[0].title}</p>
                 </div>
-                <div>
-                    <span>
-                        <small>{props.pro[0].review}</small>
-                    </span>
+                <div className="small-text">
+                    {/* <span> */}
+                        {props.pro[0].review}
+                    {/* </span> */}
                 </div>
             </div>
         );
@@ -133,10 +136,10 @@ function ProductConReview(props) {
                         row of stars - {props.con[0].overallRating}</div>
                     <p className="card-text review-title">{props.con[0].title}</p>
                 </div>
-                <div>
-                    <span>
-                        <small>{props.con[0].review}</small>
-                    </span>
+                <div className="small-text">
+                    {/* <span> */}
+                        {props.con[0].review}
+                    {/* </span> */}
                 </div>
             </div>
         );
@@ -196,18 +199,14 @@ function RightColumn(props) {
         <div className="col-6 right-col">
             <ProductPrice price={props.product_obj.Offers}/>
             <hr/>
-            {/* <ProductPromotions promos={props.product_obj.Promotions}/> */}
-            <div className="row">
-              <div className="col-4">
-                <button type="button" className="btn btn-light btn-sm minor-btn">ADD TO REGISTRY</button>
-              </div>
-              <div className="col-4">
-                <button type="button" className="btn btn-light btn-sm minor-btn">ADD TO LIST</button>
-              </div>
-               <div className="col-4">
-                <button type="button" className="btn btn-light btn-sm minor-btn">SHARE</button>
-              </div>
+            <div>
+              PROMOS!
             </div>
+            {/* <ProductPromotions promos={props.product_obj.Promotions}/> */}
+            <hr/>
+            <PurchaseChannel purchasingChannelCode={props.product_obj.purchasingChannelCode} />
+            <ReturnPolicy/>
+            <ListShareButtons/>
             <h1 className="ProductFeatures">Product Features</h1>
             <ProductFeatures features={props.product_obj.ItemDescription}/>
             {/* <div className="Product-description">{props.product_obj.description}</div> */}
@@ -215,67 +214,35 @@ function RightColumn(props) {
     );
 }
 
-function ProductPrice(props) {
-    if (!props.price || props.price === undefined) {
-        return null;
-    } else {
-        return (
-            <div className="Product-price row">
-                <h3>
-                    <strong>
-                        {props.price[0].OfferPrice[0].formattedPriceValue}
-                    </strong>
-                </h3>
-                {/*TODO: only put online tag if online price? */}
-                <span className="online-tag">
-                    <small>online price</small>
-                </span>
+function ListShareButtons() {
+    return (
+        <div className="row">
+            <div className="col-4">
+                <button type="button" className="btn btn-light btn-sm minor-btn">ADD TO REGISTRY</button>
             </div>
-        );
-    }
+            <div className="col-4">
+                <button type="button" className="btn btn-light btn-sm minor-btn">ADD TO LIST</button>
+            </div>
+            <div className="col-4">
+                <button type="button" className="btn btn-light btn-sm minor-btn">SHARE</button>
+            </div>
+        </div>
+    );
 }
 
-// function ProductPromotions(props) {
-//     if (!props.promos || props.promos === undefined) {
-//         return null;
-//     } else {
-//         const promo_list = props.promos;
-//         console.log(promo_list)
-//         var listItems = []
-//         const promoItems = promo_list.map((promo) => {
-//            listItems = promo.Description.map((numbers) => 
-//           <div>
-//             <li className="mylist">{numbers.shortDescription}</li>
-//           </div>
-//           );
-//         });
-//         console.log(promoItems)
-//         return (
-//             <div className="promos_row row">
-//                 {promoItems}
-//             </div>
-//         );
-//     }
-// }
-
-function ProductFeatures(props) {
-    if (!props.features || props.features === undefined) {
-        return null;
-    } else {
-        if (!props.features[0].features || props.features[0].features === undefined) {
-          return null;
-        } else {
-          const feature_list = props.features[0].features;
-          const listItems = feature_list.map((feature) =>
-            <li key={feature.toString()} dangerouslySetInnerHTML={{ __html: feature }}></li>
-          );
-          return (
-              <div className="promos_row row">
-                  <ul>
-                    {listItems}
-                  </ul>
-              </div>
-          );
-      }
-    }
+function ReturnPolicy(props){
+  return (
+    <div className="row">
+        <div className="col-2">
+            <h5>returns</h5>
+        </div>
+        <div className="col">
+            <p className="small-text">
+              This item must be returned within 30 days of the ship date. 
+              See <a href="#">return policy</a> for details. 
+              Prices, promotions, styles, and availability may vary by store and online.
+            </p>
+        </div>
+    </div>
+  );
 }
