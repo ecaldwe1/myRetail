@@ -1,8 +1,6 @@
 import React from 'react';
 import {FaAngleRight, FaAngleLeft} from 'react-icons/fa'
 
-import AliceCarousel from 'react-alice-carousel';
-
 import Slider from "react-slick";
 
 
@@ -57,7 +55,6 @@ function ReactSlickDemo(props){
   if (!props.images || props.images === undefined) {
       return null;
   } else {
-  // render() {
     var image_list = getImages(props.images)
     const settings = {
       dots: false,
@@ -70,19 +67,7 @@ function ReactSlickDemo(props){
     return (
       <div className="container">
         <Slider {...settings}>
-        {image_list}
-          {/* <div>
-            <img src="http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt03" />
-          </div>
-          <div>
-            <img src="http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt03" />
-          </div>
-          <div>
-            <img src="http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt03" />
-          </div>
-          <div>
-            <img src="http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt03" />
-          </div> */}
+            {image_list}
         </Slider>
       </div>
     );
