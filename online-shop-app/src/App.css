@@ -158,6 +158,16 @@ a:hover {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
+.icon {
+  font-size: 1.5em;
+}
+
+.quantity-icon {
+  font-size: 1.5em;
+  color: darkgray;
+  margin: 15px;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0px;

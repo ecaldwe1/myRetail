@@ -10,6 +10,7 @@ import ListShareButtons from './components/ListShareButtons';
 import ReturnPolicy from './components/ReturnPolicy';
 import Promotions from './components/Promotions';
 import './App.css';
+import Quantity from './components/Quantity';
 
 
 class App extends Component {
@@ -72,6 +73,7 @@ function RightColumn(props) {
             <ProductPrice price={props.product_obj.Offers}/>
             <Promotions promos={props.product_obj.Promotions}/>
             <hr/>
+            <Quantity/>
             <PurchaseChannel purchasingChannelCode={props.product_obj.purchasingChannelCode} />
             <ReturnPolicy/>
             <ListShareButtons/>
