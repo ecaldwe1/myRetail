@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  margin: 20px;
+  /* margin-left: 20px;
+  margin-right: 20px; */
 }
 
 .App-logo {
@@ -18,9 +21,11 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* .App-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -30,3 +35,217 @@
     transform: rotate(360deg);
   }
 }
+
+.ProductTitle {
+    font-size: 23px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.OverallStarsRow {
+  margin: 20px;
+  align-items: center;
+}
+
+.PickupBtn {
+  text-align: center;
+}
+
+.FiveStars{
+  margin: 20px;
+  align-items: center;
+}
+
+.Target-red {
+  /* color: #e80018; */
+  color: #cc0000;
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.right-col {
+  text-align: left;
+}
+
+.online-tag {
+  vertical-align: -webkit-baseline-middle;
+  margin-left: 10px;
+}
+
+.card {
+  background-color: rgb(247, 247, 247);
+  border-color: rgb(247, 247, 247);
+  color: black;
+  text-align: left;
+  align-content: center;
+  margin: 20px;
+}
+
+.card-body{
+  margin: 15px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.review-title {
+  font-weight: bold;
+}
+
+.major-btn {
+    width: 100%;
+}
+
+.minor-btn {
+  background-color: rgb(247, 247, 247);
+  width: 100%;
+}
+
+.row {
+  margin: 20px;
+}
+
+.small-text {
+  font-size: small;
+}
+
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.carousel-images {
+  width: 50%;
+}
+
+
+.slick-slide img{
+  width: 50%;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    outline: 0px;
+}
+
+h1 {
+    font-size: 29px;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* font-weight: bold; */
+}
+
+body {
+    line-height: 1.42857;
+    color: rgb(51, 51, 51);
+    background-color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+html {
+    font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+/* .h-margin-b-tiny {
+    margin-bottom: 5px !important;
+}
+
+.h-margin-b-none {
+    margin-bottom: 0px !important;
+}
+
+.h-margin-t-default {
+    margin-top: 15px !important;
+}
+
+.h-text-normal {
+    font-weight: normal !important;
+}
+
+.h-text-hd2 {
+    font-size: 23px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+div, span, p, [tabindex="-1"] {
+    outline: 0px;
+} */
+
+/* .slider {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  height: 500px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+}
+
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.backArrow {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.fa-arrow-right:before, .fa-arrow-left:before {
+  color: #222
+} */
