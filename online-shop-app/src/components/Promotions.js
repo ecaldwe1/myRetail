@@ -2,25 +2,23 @@ import React, {Fragment} from 'react';
 import {IoMdPricetag} from 'react-icons/io';
 
 function Promotions(props){
-    if (!props.promos || props.promos === undefined) {
+    if (!props.promos) {
         return null;
     } else {
         const promo_list = props.promos;
-        console.log(promo_list)
         const promoItems = promo_list.map((promo) => 
             <li key={promo.promotionIdentifier}>
-                <IoMdPricetag/> promo.Description[0].shortDescription
+                <IoMdPricetag className="promo-tag"/> {promo.Description[0].shortDescription}
             </li>
         );
-                // <IoMdPricetag /> PROMOS!
-            // </Fragment>
         return(
             <Fragment>
                 <hr/>
-                <ul className="promo_ul">
+                <div className="row">
+                <ul className="promo-ul">
                 {promoItems}
                 </ul>
-                
+                </div>
             </Fragment>
             
         );

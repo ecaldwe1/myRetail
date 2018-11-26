@@ -70,18 +70,13 @@ function RightColumn(props) {
     return (
         <div className="col-6 right-col">
             <ProductPrice price={props.product_obj.Offers}/>
-            <div className="row">
-              {/* <IoMdPricetag /> PROMOS! */}
-              <Promotions promos={props.product_obj.Promotions}/>
-            </div>
-            {/* <ProductPromotions promos={props.product_obj.Promotions}/> */}
+            <Promotions promos={props.product_obj.Promotions}/>
             <hr/>
             <PurchaseChannel purchasingChannelCode={props.product_obj.purchasingChannelCode} />
             <ReturnPolicy/>
             <ListShareButtons/>
             <h1 className="ProductFeatures">Product Features</h1>
             <ProductFeatures features={props.product_obj.ItemDescription}/>
-            {/* <div className="Product-description">{props.product_obj.description}</div> */}
         </div>
     );
 }
