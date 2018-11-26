@@ -73,7 +73,7 @@ function RightColumn(props) {
             <ProductPrice price={props.product_obj.Offers}/>
             <Promotions promos={props.product_obj.Promotions}/>
             <hr/>
-            <Quantity product_obj={props.product_obj}/>
+            <Quantity/>
             <PurchaseChannel purchasingChannelCode={props.product_obj.purchasingChannelCode} />
             <ReturnPolicy/>
             <ListShareButtons/>

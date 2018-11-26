@@ -8,10 +8,9 @@ function Quantity(props){
     if(!props){
         return null;
     } else {
-        console.log("PROPS: ", props)
         return (
             <Fragment>
-                <QuantityForm product_obj={props.product_obj}/>
+                <QuantityForm/>
             </Fragment>
         );
     }
@@ -46,8 +45,8 @@ class QuantityForm extends React.Component {
         return (
         <form>
                 <div className="row">
-                    <div className="col-sm-6 col-md-6">
-                        quantity:             
+                    <div className="col-sm-6 col-md-6 quantity-form">
+                        <span className="small-text">quantity: </span>            
                         <span>
                             <a href="#" className={this.checkDisabled(minusBtnClass)} role="link" onClick={this.onclick.bind(this, 'sub')} value='Dec'>
                                 <FaMinusCircle className="quantity-icon"/>
@@ -59,7 +58,7 @@ class QuantityForm extends React.Component {
                         </span>
                     </div>
                     <div className="col-sm-6 col-md-6">
-                        <input id="productQuantity" type="text" value={this.state.count} onChange={this.handleChange} hidden/>
+                        <input id="productQuantity" type="text" value={this.state.count} onChange={this.handleChange} hidden readOnly/>
                     </div>
                 </div>
         </form>
