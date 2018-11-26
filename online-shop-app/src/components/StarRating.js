@@ -8,9 +8,9 @@ function StarRating(props) {
     var fivestars = [1, 2, 3, 4, 5];
     var listItems = fivestars.map((star) => {
         if (star <= rating_number) {
-            return <IoMdStar key={star.toString()} className="red-star"/>
+            return <IoMdStar key={star.toString()} className="icon red-star"/>
         } else {
-            return <IoMdStar key={star.toString()} className="gray-star"/>
+            return <IoMdStar key={star.toString()} className="icon gray-star"/>
         }
     });
     return (
