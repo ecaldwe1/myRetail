@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-expressions */
 import React, {Component} from 'react';
 import PurchaseChannel from './components/PurchasingChannel';
-import {IoMdPricetag} from 'react-icons/io';
-// import IOIcons from 'react-icons/io'; 
-// import logo from './logo.svg'; import
 import ProductFeatures from './components/ProductFeatures';
 import ProductPrice from './components/ProductPrice';
 import ProductReviews from './components/ProductReviews';
 import ReactSlickDemo from './components/ImageCarousel';
-
+import ProductImage from './components/ProductImage';
+import ListShareButtons from './components/ListShareButtons';
+import ReturnPolicy from './components/ReturnPolicy';
+import Promotions from './components/Promotions';
 import './App.css';
 
 
@@ -21,7 +21,7 @@ class App extends Component {
     }
     render() {
         return (
-            <div className="App container">
+            <div className="App container-fluid">
                 <div className="row">
                     <LeftColumn product_obj={this.state.data}/> 
                     <RightColumn product_obj={this.state.data}/>
@@ -51,9 +51,8 @@ function LeftColumn(props) {
     if (!props || props === undefined) {
         return null;
     } else {
-      // console.log("LeftColumn: ", props)
         return (
-            <div className="col-6">
+            <div className="col-sm-12 col-md-5">
                 <h1 className="ProductTitle">{props.product_obj.title}</h1>
                 <ProductImage main_image={props.product_obj.Images} product_title={props.product_obj.title}/>
                 <div className="row">
@@ -66,51 +65,14 @@ function LeftColumn(props) {
     }
 }
 
-function ProductImage(props) {
-    if (!props.main_image || props.main_image === undefined) {
-        return null;
-    } else {
-        return (
-            <div>
-                <img
-                    src={props.main_image[0].PrimaryImage[0].image}
-                    alt={props.product_title}/>
-            </div>
-        );
-    }
-
-}
-
-// function ProductConReview(props) {
-//     if (!props.con || props.con === undefined) {
-//         return null;
-//     } else {
-//         return (
-//             <div className="col-sm-5">
-//                 <div>
-//                     <div>
-//                         <StarRating rating={props.con[0].overallRating}/></div>
-//                     <p className="card-text review-title">{props.con[0].title}</p>
-//                 </div>
-//                 <div className="small-text">
-//                     {/* <span> */}
-//                         {props.con[0].review}
-//                     {/* </span> */}
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
-
-
 function RightColumn(props) {
     // console.log("RightColumn: ", props)
     return (
         <div className="col-6 right-col">
             <ProductPrice price={props.product_obj.Offers}/>
-            <hr/>
             <div className="row">
-              <IoMdPricetag /> PROMOS!
+              {/* <IoMdPricetag /> PROMOS! */}
+              <Promotions promos={props.product_obj.Promotions}/>
             </div>
             {/* <ProductPromotions promos={props.product_obj.Promotions}/> */}
             <hr/>
@@ -122,39 +84,6 @@ function RightColumn(props) {
             {/* <div className="Product-description">{props.product_obj.description}</div> */}
         </div>
     );
-}
-
-function ListShareButtons() {
-    return (
-        <div className="row">
-            <div className="col-4">
-                <button type="button" className="btn btn-light btn-sm minor-btn">ADD TO REGISTRY</button>
-            </div>
-            <div className="col-4">
-                <button type="button" className="btn btn-light btn-sm minor-btn">ADD TO LIST</button>
-            </div>
-            <div className="col-4">
-                <button type="button" className="btn btn-light btn-sm minor-btn">SHARE</button>
-            </div>
-        </div>
-    );
-}
-
-function ReturnPolicy(props){
-  return (
-    <div className="row">
-        <div className="col-2">
-            <h5>returns</h5>
-        </div>
-        <div className="col">
-            <p className="small-text">
-              This item must be returned within 30 days of the ship date. 
-              See <a href="#">return policy</a> for details. 
-              Prices, promotions, styles, and availability may vary by store and online.
-            </p>
-        </div>
-    </div>
-  );
 }
 
 

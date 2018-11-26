@@ -9,12 +9,13 @@
     "react-scripts": "2.1.1",
     "react-slick": "^0.23.2",
     "react-test-renderer": "^16.6.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "html-react-parser": "^0.4.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cucumber-js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "cucumber": "^5.0.2",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",

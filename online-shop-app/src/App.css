@@ -134,10 +134,14 @@ a:hover {
   width: 50%;
 }
 
-
 .slick-slide img{
   width: 50%;
 }
+
+.static-position {
+  position: static;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0px;
     outline: 0px;
@@ -168,90 +172,11 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     margin: 0px;
-}
+} 
 
 html {
     font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     text-size-adjust: 100%;
     box-sizing: border-box;
-}
-
-/* .h-margin-b-tiny {
-    margin-bottom: 5px !important;
-}
-
-.h-margin-b-none {
-    margin-bottom: 0px !important;
-}
-
-.h-margin-t-default {
-    margin-top: 15px !important;
-}
-
-.h-text-normal {
-    font-weight: normal !important;
-}
-
-.h-text-hd2 {
-    font-size: 23px;
-    line-height: 1.25;
-    margin-bottom: 10px;
-}
-
-div, span, p, [tabindex="-1"] {
-    outline: 0px;
-} */
-
-/* .slider {
-  position: relative;
-  width: 500px;
-  margin: 0 auto;
-  height: 500px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.slider-wrapper {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.slide {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-}
-
-.arrow {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f9f9f9;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform ease-in .1s;
-}
-
-.nextArrow {
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  z-index: 999;
-  color: #fff;
-}
-
-.backArrow {
-  position: absolute;
-  top: 50%;
-  left: 25px;
-  z-index: 999;
-  color: #fff;
-}
-
-.fa-arrow-right:before, .fa-arrow-left:before {
-  color: #222
-} */
+} 
