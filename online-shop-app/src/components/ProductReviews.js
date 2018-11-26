@@ -56,7 +56,7 @@ function ProductReviewOverall(props) {
         return (
             <div className="row OverallStarsRow">
                 <div className="col-6">
-                    <div className="row FiveStars">
+                    <div className="row">
                       <StarRating rating={props.product_overall_rating}/>
                         <span>
                             <strong> overall</strong>

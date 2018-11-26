@@ -62,6 +62,7 @@ function ReactSlickDemo(props){
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      initialSlide: -1,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     };

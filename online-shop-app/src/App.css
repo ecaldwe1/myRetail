@@ -21,12 +21,6 @@
   color: white;
 }
 
-/* .App-link {
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-} */
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -57,9 +51,21 @@
   align-items: center;
 }
 
+.FiveStarsReview{
+  align-items: center;
+}
+
 .Target-red {
   /* color: #e80018; */
   color: #cc0000;
+}
+
+.red-star {
+  color: #cc0000;
+}
+
+.gray-star {
+  color: darkgray;
 }
 
 .breadcrumb {

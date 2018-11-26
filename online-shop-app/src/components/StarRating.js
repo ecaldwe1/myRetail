@@ -8,13 +8,13 @@ function StarRating(props) {
     var fivestars = [1, 2, 3, 4, 5];
     var listItems = fivestars.map((star) => {
         if (star <= rating_number) {
-            return <IoMdStar key={star.toString()}/>
+            return <IoMdStar key={star.toString()} className="red-star"/>
         } else {
-            return <IoMdStarOutline key={star.toString()}/>
+            return <IoMdStar key={star.toString()} className="gray-star"/>
         }
     });
     return (
-    <div className="FiveStars">
+    <div className="FiveStarsReview">
         {listItems}
     </div>
     )
