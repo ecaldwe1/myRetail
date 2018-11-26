@@ -11,7 +11,7 @@ const SamplePrevArrow = (props) => {
         <div 
             className={className}
             onClick={onClick}>
-            <FaAngleLeft
+            <FaAngleLeft className="carouselArrow"
                 color="#000"
                 size="2x"
             />
