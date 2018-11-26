@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-expressions */
 import React, {Component} from 'react';
 import PurchaseChannel from './components/PurchasingChannel';
-import {IoMdPricetag} from 'react-icons/io';
+import {IoMdPricetag} from 'react-icons/io/index';
 // import IOIcons from 'react-icons/io'; 
 // import logo from './logo.svg'; import
-import ProductFeatures from './components/ProductFeatures';
-import ProductPrice from './components/ProductPrice';
+import ProductFeatures from './components/ProductFeatures.js';
+import ProductPrice from './components/ProductPrice.js';
 import './App.css';
-import StarRating from './components/StarRating';
-import ReactSlickDemo from './components/ImageCarousel'
+import StarRating from './components/StarRating.js';
+import ReactSlickDemo from './components/ImageCarousel.js'
 
 class App extends Component {
     constructor(props) {
