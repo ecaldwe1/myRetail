@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaAngleRight, FaAngleLeft} from 'react-icons/fa'
+import {FaAngleRight, FaAngleLeft} from 'react-icons/fa';
 
 import Slider from "react-slick";
 
