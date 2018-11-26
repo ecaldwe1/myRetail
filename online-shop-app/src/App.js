@@ -8,8 +8,6 @@ import ProductFeatures from './components/ProductFeatures';
 import ProductPrice from './components/ProductPrice';
 import './App.css';
 import StarRating from './components/StarRating';
-import Gallery from './components/ImageCarousel';
-import "react-alice-carousel/lib/alice-carousel.css";
 import ReactSlickDemo from './components/ImageCarousel'
 
 class App extends Component {
