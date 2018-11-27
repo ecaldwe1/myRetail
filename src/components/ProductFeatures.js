@@ -14,7 +14,7 @@ function ProductFeatures(props) {
                 </li>
             );
             return (
-                <div className="promos_row row">
+                <div className="features_row row">
                     <ul>
                         {listItems}
                     </ul>
