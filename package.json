@@ -37,6 +37,7 @@
     "gulp-uglify": "^3.0.1",
     "jquery": "^3.3.1",
     "jshint": "^2.9.6",
-    "query-string": "^6.2.0"
+    "query-string": "^6.2.0",
+    "react-cucumber": "^1.0.7"
   }
 }
