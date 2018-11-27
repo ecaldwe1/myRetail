@@ -1,8 +1,6 @@
 .App {
   text-align: center;
   margin: 20px;
-  /* margin-left: 20px;
-  margin-right: 20px; */
 }
 
 .App-logo {
@@ -56,8 +54,12 @@
 }
 
 .Target-red {
-  /* color: #e80018; */
   color: #cc0000;
+}
+
+.Target-red-bkg {
+  background-color: #cc0000;
+  color: white
 }
 
 .red-star {
@@ -103,7 +105,7 @@
 }
 
 .major-btn {
-    width: 100%;
+  width: 100%;
 }
 
 .minor-btn {
@@ -128,6 +130,10 @@ a {
 a:hover {
   text-decoration: underline;
   color: black;
+}
+
+.image-carousel {
+  margin-bottom: 10px;
 }
 
 .carousel-images {
@@ -164,8 +170,16 @@ a:hover {
 
 .quantity-icon {
   font-size: 1.5em;
-  color: darkgray;
+  color: #a9a9a9;
   margin: 15px;
+}
+
+.viewLarger {
+  margin: 15px;
+}
+
+.zoomIn{
+  margin-top: 50px;
 }
 
 

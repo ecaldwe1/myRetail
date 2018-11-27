@@ -51,7 +51,7 @@ class QuantityForm extends React.Component {
                             <a href="#" className={this.checkDisabled(minusBtnClass)} role="link" onClick={this.onclick.bind(this, 'sub')} value='Dec'>
                                 <FaMinusCircle className="quantity-icon"/>
                             </a>
-                            {this.state.count}
+                            <strong>{this.state.count}</strong>
                             <a href="#" className="btn btn-link" role="link" onClick={this.onclick.bind(this, 'add')} value='Inc'>
                                 <FaPlusCircle className="quantity-icon"/>
                             </a>

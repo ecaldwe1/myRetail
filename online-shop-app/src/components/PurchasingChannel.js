@@ -12,7 +12,7 @@ function PickUpButton(props) {
 }
 
 function AddCartButton(props) {
-    return <button type="button" className="btn btn-danger btn-large major-btn">ADD TO CART</button>;
+    return <button type="button" className="btn btn-large major-btn Target-red-bkg">ADD TO CART</button>;
 }
 
 function PurchaseChannel(props) {
