@@ -2,7 +2,7 @@ import React from 'react';
 
 function ReturnPolicy(props){
   return (
-    <div className="row static-position">
+    <div className="row d-flex flex-nowrap">
         <div className="col-2">
             <h5>returns</h5>
         </div>

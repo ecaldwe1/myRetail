@@ -14,7 +14,7 @@ function StarRating(props) {
         }
     });
     return (
-    <div className="FiveStarsReview">
+    <div className="FiveStarsReview d-flex flex-nowrap">
         {listItems}
     </div>
     )

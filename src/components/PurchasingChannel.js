@@ -19,7 +19,7 @@ function PurchaseChannel(props) {
     const channelCode = props.purchasingChannelCode;
     if (channelCode === "0") {
         return (
-            <div className="row">
+            <div className="row d-flex flex-nowrap">
                 <div className="col">
                     <PickUpButton/>
                 </div>
