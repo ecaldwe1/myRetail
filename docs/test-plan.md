@@ -28,4 +28,4 @@
 
 I am using [Puppeteer](https://github.com/GoogleChrome/puppeteer) and [Cucumber](docs.cucumber.io/guides/) to automate my functional tests. Cucumber allows one to write tests in plain text, which is pretty cool. [react-cucumber](https://github.com/pzavolinsky/react-cucumber) allows testing of React components using Cucumber. 
 
-Note: As of submission time, this is still a work in progress. Current testing can be found on the testing branch.
+_Note: As of submission time, this is still a work in progress. Current testing can be found on the `testing` branch._
