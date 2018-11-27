@@ -11,7 +11,9 @@ import Quantity from './components/Quantity';
 import SlickCarousel from './components/ImageCarousel';
 import ReturnPolicy from './components/ReturnPolicy';
 import './App.css';
+import { URLSearchParams } from 'url';
 
+const queryString = require('query-string');
 
 class App extends Component {
     constructor(props) {
@@ -31,7 +33,8 @@ class App extends Component {
     }
 
     loadData() {
-        fetch('/data/item-data.json')
+        const json_data_file = '/data/item-data.json'; 
+        fetch(json_data_file)
             .then(response => response.json())
             .then(data => {
                 this.setState({data: data.CatalogEntryView[0]});
