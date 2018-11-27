@@ -55,7 +55,7 @@ function ProductReviewOverall(props) {
     } else {
         return (
             <div className="row OverallStarsRow">
-                <div className="col-6">
+                <div className="col-sm-6 col-md-6">
                     <div className="row">
                       <StarRating rating={props.product_overall_rating}/>
                         <span>
@@ -63,7 +63,7 @@ function ProductReviewOverall(props) {
                         </span>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-sm-6 col-md-6">
                     <div className="ReviewLink">
                         <a className="App-link" href="#">
                             View all {props.product_review_count} reviews
@@ -80,7 +80,7 @@ function ProductSingleReview(props) {
         return null;
     } else {
         return (
-            <div className="col-sm-12 col-md-6">
+            <div className="col-sm-6 col-md-6">
                 <div>
                     <div>
                       <StarRating rating={props.review[0].overallRating}/>
