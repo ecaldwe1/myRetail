@@ -2,7 +2,7 @@ import React from 'react';
 
 function ListShareButtons() {
     return (
-        <div className="row static-position">
+        <div className="row static-position d-flex flex-nowrap">
             <div className="col-4">
                 <button type="button" className="btn btn-light btn-sm minor-btn">ADD TO REGISTRY</button>
             </div>

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .App-logo {
@@ -18,19 +20,9 @@
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .ProductTitle {
     font-size: 23px;
     line-height: 1.25;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -88,11 +80,12 @@
   color: black;
   text-align: left;
   align-content: center;
-  margin: 20px;
+  word-wrap: normal
 }
 
 .card-body{
-  margin: 15px;
+  padding: 0px;
+
 }
 
 .card-title {
@@ -101,6 +94,16 @@
 
 .review-title {
   font-weight: bold;
+  margin: 0px;
+}
+
+.review-text {
+  margin: 0px;
+}
+
+.review-column {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .major-btn {
@@ -181,6 +184,15 @@ a:hover {
   margin-top: 50px;
 }
 
+.return-policy {
+  word-wrap: normal;
+}
+
+.features-row {
+  margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0px;

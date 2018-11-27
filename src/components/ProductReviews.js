@@ -12,8 +12,8 @@ function ProductReviews(props) {
                 <div className="col-sm-12 col-md-12">
                     <div className="card">
                         <div className="card-body">
-                            <div className="row">
-                                <div className="col-sm-12 col-md-6">
+                            <div className="row d-flex flex-nowrap">
+                                <div className="col-sm-12 col-md-6 flex-shrink-1">
                                     <div>
                                         <h6 className="card-title">PRO</h6>
                                     </div>
@@ -35,7 +35,7 @@ function ProductReviews(props) {
                                 </div>
                             </div>
                             <hr></hr>
-                            <div className="row">
+                            <div className="row review-text">
                                 <ProductSingleReview review={props.product_reviews[0].Pro}/>
                                 <ProductSingleReview review={props.product_reviews[0].Con}/>
                             </div>
@@ -54,9 +54,9 @@ function ProductReviewOverall(props) {
         return null;
     } else {
         return (
-            <div className="row OverallStarsRow">
+            <div className="row OverallStarsRow d-flex flex-nowrap">
                 <div className="col-sm-6 col-md-6">
-                    <div className="row">
+                    <div className="row d-flex flex-nowrap">
                       <StarRating rating={props.product_overall_rating}/>
                         <span>
                             <strong> overall</strong>
@@ -64,8 +64,8 @@ function ProductReviewOverall(props) {
                     </div>
                 </div>
                 <div className="col-sm-6 col-md-6">
-                    <div className="ReviewLink">
-                        <a className="App-link" href="#">
+                    <div className="ReviewLink d-flex flex-nowrap">
+                        <a className="App-link flex-shrink-1" href="#">
                             View all {props.product_review_count} reviews
                         </a>
                     </div>

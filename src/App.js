@@ -25,8 +25,6 @@ class App extends Component {
             <div className="App container-fluid">
                 <div className="row">
                     <ProductDetail product_obj={this.state.data}/> 
-                    {/* <LeftColumn product_obj={this.state.data}/> 
-                    <RightColumn product_obj={this.state.data}/> */}
                 </div>
             </div>
         );
@@ -56,7 +54,7 @@ function ProductDetail(props){
         return (
         <Fragment>
             <div className="col-sm-12 col-md-5">
-                <h1 className="ProductTitle">{props.product_obj.title}</h1>
+                <h1 className="ProductTitle text-center">{props.product_obj.title}</h1>
                 <ProductImage main_image={props.product_obj.Images} product_title={props.product_obj.title}/>
                 <div className="row image-carousel">
                     <SlickCarousel images={props.product_obj.Images}/>
@@ -73,7 +71,7 @@ function ProductDetail(props){
                 <h1 className="ProductFeatures">Product Features</h1>
                 <ProductFeatures features={props.product_obj.ItemDescription}/>
             </div>
-            <div className="col-sm-12 col-md-5">
+            <div className="col-sm-12 col-md-5 review-column">
                 <ProductReviews product_reviews={props.product_obj.CustomerReview}/>
             </div>
         </Fragment>
