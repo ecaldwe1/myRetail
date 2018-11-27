@@ -7,6 +7,10 @@ For more details, please check out the [Wiki](https://github.com/ecaldwe1/myReta
 
 This is my first experience working with React!
 
+### Documents:
+- [Continuous Delivery Diagram](docs/Continuous_Delivery_Diagram.pdf)
+- [Test Plan](docs/test-plan.md)
+
 ### Technical decisions
 
 #### Front-end framework
