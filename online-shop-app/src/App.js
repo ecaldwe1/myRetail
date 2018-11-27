@@ -8,7 +8,7 @@ import ProductReviews from './components/ProductReviews';
 import Promotions from './components/Promotions';
 import PurchaseChannel from './components/PurchasingChannel';
 import Quantity from './components/Quantity';
-import ReactSlickDemo from './components/ImageCarousel';
+import SlickCarousel from './components/ImageCarousel';
 import ReturnPolicy from './components/ReturnPolicy';
 import './App.css';
 
@@ -58,8 +58,8 @@ function ProductDetail(props){
             <div className="col-sm-12 col-md-5">
                 <h1 className="ProductTitle">{props.product_obj.title}</h1>
                 <ProductImage main_image={props.product_obj.Images} product_title={props.product_obj.title}/>
-                <div className="row">
-                    <ReactSlickDemo images={props.product_obj.Images}/>
+                <div className="row image-carousel">
+                    <SlickCarousel images={props.product_obj.Images}/>
                 </div>
             </div>
             <div className="col-sm-12 col-md-7 right-col">

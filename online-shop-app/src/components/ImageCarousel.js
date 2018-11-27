@@ -52,7 +52,7 @@ function getImages(images_list){
   return result
 }
 
-function ReactSlickDemo(props){
+function SlickCarousel(props){
   if (!props.images || props.images === undefined) {
       return null;
   } else {
@@ -75,4 +75,4 @@ function ReactSlickDemo(props){
     );
   }
 }
-export default ReactSlickDemo
+export default SlickCarousel
