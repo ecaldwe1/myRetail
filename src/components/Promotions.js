@@ -8,7 +8,8 @@ function Promotions(props){
         const promo_list = props.promos;
         const promoItems = promo_list.map((promo) => 
             <li key={promo.promotionIdentifier}>
-                <IoMdPricetag className="icon promo-tag"/> {promo.Description[0].shortDescription}
+                <IoMdPricetag className="icon promo-tag"/> 
+                <span className="Target-red">{promo.Description[0].shortDescription}</span>
             </li>
         );
         return(

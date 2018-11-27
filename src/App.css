@@ -53,6 +53,7 @@
   color: white
 }
 
+
 .red-star {
   color: #cc0000;
 }
@@ -97,8 +98,12 @@
   margin: 0px;
 }
 
-.review-text {
+.review-body {
   margin: 0px;
+}
+
+.review-text{
+  margin-bottom: 5px;
 }
 
 .review-column {
@@ -124,12 +129,16 @@
 }
 
 a {
+  text-decoration: none;
+}
+
+.a-styled {
   font-weight: bold;
   color: black;
   text-decoration: none;
 }
 
-a:hover {
+.a-styled:hover {
   text-decoration: underline;
   color: black;
 }

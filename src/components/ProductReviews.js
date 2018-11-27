@@ -35,7 +35,7 @@ function ProductReviews(props) {
                                 </div>
                             </div>
                             <hr></hr>
-                            <div className="row review-text">
+                            <div className="row review-body">
                                 <ProductSingleReview review={props.product_reviews[0].Pro}/>
                                 <ProductSingleReview review={props.product_reviews[0].Con}/>
                             </div>
@@ -65,7 +65,7 @@ function ProductReviewOverall(props) {
                 </div>
                 <div className="col-sm-6 col-md-6">
                     <div className="ReviewLink d-flex flex-nowrap">
-                        <a className="App-link flex-shrink-1" href="#">
+                        <a className="App-link flex-shrink-1 a-styled" href="#">
                             View all {props.product_review_count} reviews
                         </a>
                     </div>
@@ -79,6 +79,7 @@ function ProductSingleReview(props) {
     if (!props.review || props.review === undefined) {
         return null;
     } else {
+        const review_date = formatDate(props.review[0].datePosted)
         return (
             <div className="col-6">
                 <div>
@@ -87,10 +88,21 @@ function ProductSingleReview(props) {
                       </div>
                     <p className="card-text review-title">{props.review[0].title}</p>
                 </div>
-                <div className="small-text">
+                <div className="small-text review-text">
                         {props.review[0].review}
+                </div>
+                <div className="small-text">
+                    <span>
+                        <a href="">{props.review[0].screenName}</a> {review_date}
+                    </span>
                 </div>
             </div>
         );
     }
+}
+
+
+function formatDate(string){
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(string).toLocaleDateString([],options);
 }

@@ -6,7 +6,7 @@ function PickUpButton(props) {
             <button type="button" className="btn btn-dark btn-large major-btn">
                 PICK UP IN STORE
             </button>
-            <a href="#" className="small-text">find in a store</a>
+            <a href="#" className="small-text a-styled">find in a store</a>
         </div>
     );
 }

@@ -11,7 +11,6 @@ function ProductPrice(props) {
                         {props.price[0].OfferPrice[0].formattedPriceValue}
                     </strong>
                 </h3>
-                {/*TODO: only put online tag if online price? */}
                 <span className="online-tag small-text">
                     online price
                 </span>
