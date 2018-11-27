@@ -3,7 +3,7 @@
 This application is the product page for an item sold in myRetail stores.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-For more details, please check out the Wiki.
+For more details, please check out the [Wiki](https://github.com/ecaldwe1/myRetail/wiki).
 
 This is my first experience working with React!
 
