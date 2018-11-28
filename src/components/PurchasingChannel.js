@@ -17,6 +17,7 @@ function AddCartButton(props) {
 
 function PurchaseChannel(props) {
     const channelCode = props.purchasingChannelCode;
+    console.log("CHANNEL_CODE: ", channelCode)
     if (channelCode === "0") {
         return (
             <div className="row d-flex flex-nowrap">
@@ -28,9 +29,23 @@ function PurchaseChannel(props) {
             </div>
         );
     } else if (channelCode === "2") {
-        return <PickUpButton/>;
+        return (
+            <div className="row d-flex flex-nowrap">
+                <div className="col">
+                    <PickUpButton/>
+                </div>
+            </div>
+            
+        )
     } else if (channelCode === "1") {
-        return <AddCartButton/>;
+        return (
+            // <div className="row d-flex flex-nowrap">
+            //     <div className="col">
+                    <AddCartButton/>
+            // /* </div>
+            // </div> 
+            
+        )
     } else {
         return null;
     }

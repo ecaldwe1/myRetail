@@ -21,8 +21,7 @@
     - If loading `test--pickup-only-item-data.json`, then only the Pick Up in Stores button should be shown.
 
 
-
-
-
 ### Automating functional testing
+
+A start to automated testing can be found in `src/__tests__/first_test.test.js`. It is a simple test, checking that the page title is correct.
 

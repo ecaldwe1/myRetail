@@ -28,4 +28,6 @@ I utilized the [react-slick](https://github.com/akiran/react-slick) component fo
 Icons used in this application come from [react-icons](https://www.npmjs.com/package/react-icons).
 
 #### Testing
-Testing is done using [Puppeteer](https://github.com/GoogleChrome/puppeteer) and [Cucumber](https://cucumber.io/).
+Testing is done using [Puppeteer](https://github.com/GoogleChrome/puppeteer) and Jest, which is pre-installed with React when using the `create-react-app` command. 
+
+I tried using react-cucumber for testing, but ultimately decided to return to the pre-installed testing framework.
